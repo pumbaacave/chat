@@ -4,13 +4,15 @@ import { connect } from "react-redux";
 class ChatBar extends Component {
 
   handleOnSubmit(event) {
-    console.log(event);
-    this.props.channel.push(
-      "shout", {
-        name: event.name,
-        text: event.text
-      }
-    );
+    event.preventDefault();
+    console.log(this);
+    console.log(event.target);
+    // this.props.channel.push(
+    //   "shout", {
+    //     name: event.name,
+    //     text: event.text
+    //   }
+    // );
   }
 
   render() {

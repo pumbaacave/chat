@@ -18,5 +18,5 @@ module.exports = {
     extensions: ['.js', '.jsx']
   },
   target: "web",
-  devtool: "eval-source-map"
+  devtool: "source-map"
 };

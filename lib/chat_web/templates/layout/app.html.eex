@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <script src="<%= static_path(@conn, "/js/bundle.js") %>"></script>
 
     <title>Hello Chat!</title>
   </head>
