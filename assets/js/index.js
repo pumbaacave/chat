@@ -20,11 +20,11 @@ import "phoenix_html"
 
 import socket from "./socket"
 
-var channel = socket.channel('room:lobby', {}); // connect to chat "room"
+const channel = socket.channel('room:lobby', {}); // connect to chat "room"
 
-channel.on('shout', function (payload) { // listen to the 'shout' event
-  var li = document.createElement("li"); // creaet new list item DOM element
-  var name = payload.name || 'guest';    // get name from payload or set default
+channel.on('shout', (payload) => { // listen to the 'shout' event
+  let li = document.createElement("li"); // creaet new list item DOM element
+  let name = payload.name || 'guest';    // get name from payload or set default
   li.innerHTML = '<b>' + name + '</b>: ' + payload.message; // set li contents
   ul.appendChild(li);                    // append to list
 });
@@ -32,9 +32,9 @@ channel.on('shout', function (payload) { // listen to the 'shout' event
 channel.join(); // join the channel.
 
 
-var ul = document.getElementById('msg-list');        // list of messages.
-var name = document.getElementById('name');          // name of message sender
-var msg = document.getElementById('msg');            // message input field
+const ul = document.getElementById('msg-list');        // list of messages.
+const name = document.getElementById('name');          // name of message sender
+const msg = document.getElementById('msg');            // message input field
 
 // "listen" for the [Enter] keypress event to send a message:
 msg.addEventListener('keypress', function (event) {
