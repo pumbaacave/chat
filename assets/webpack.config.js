@@ -1,5 +1,5 @@
 module.exports = {
-  mode: process.env.NODE_ENV || "development",
+  mode: "development",
   entry: ["./js/index.js"],
   output: {
     filename: "bundle.js",
@@ -8,11 +8,15 @@ module.exports = {
 	module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         use: "babel-loader",
         exclude: /node_modules/
       }
     ]
   },
-  devtool: 'inline-source-map'
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
+  target: "web",
+  devtool: "eval-source-map"
 };
