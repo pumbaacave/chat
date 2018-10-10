@@ -1,7 +1,8 @@
 import { combineReducers } from "redux";
+import ChannelData from "./channel-reducer";
 
 const rootReducer = combineReducers({
-  dummy: (state = {}) => {return state;}
+  ChannelData
 });
 
 export default rootReducer;

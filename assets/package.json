@@ -3,7 +3,8 @@
   "license": "MIT",
   "scripts": {
     "webpack": "node_modules/.bin/webpack --config webpack.config.js",
-    "build": "webpack"
+    "build": "webpack",
+    "watch": "webpack --watch"
   },
   "dependencies": {
     "@babel/preset-react": "^7.0.0",
@@ -26,6 +27,8 @@
     "babel-loader": "^8.0.4",
     "babel-preset-react": "^6.1.18",
     "babel-preset-stage-1": "^6.1.18",
+    "css-loader": "^1.0.0",
+    "style-loader": "^0.23.1",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2"
   }
