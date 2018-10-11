@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { pushHistory } from "../actions/index";
+import { channelJoin, pushHistory } from "../actions/index";
 import { bindActionCreators } from "redux";
 
 class ChatBar extends Component {
@@ -17,7 +17,7 @@ class ChatBar extends Component {
     };
     console.log(payload);
     this.props.channel.push("shout", payload);
-    this.props.pushHistory(payload);
+    this.props.dispatch(pushHistory(payload));
   }
 
   render() {
