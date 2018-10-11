@@ -4,6 +4,9 @@ import { pushHistory } from "../actions/index";
 import { bindActionCreators } from "redux";
 
 class ChatBar extends Component {
+  componentDidMount() {
+    this.props.dispatch(channelJoin(this.props.dispatch));
+  }
   handleOnSubmit(event) {
     event.preventDefault();
     console.log(this);
@@ -56,6 +59,6 @@ function mapStateToProps({ ChannelData }) {
 }
 
 export default connect(
-  mapStateToProps,
-  { pushHistory } // mapDispatchToProps
+  mapStateToProps
+  //{ pushHistory } // mapDispatchToProps
 )(ChatBar);

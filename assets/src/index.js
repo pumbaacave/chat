@@ -13,8 +13,7 @@ import promise from "redux-promise";
 // Local files can be imported directly using relative
 // paths "./socket" or full ones "web/static/js/socket".
 
-import ChatBar from "./components/chat-bar";
-import ChatHistory from "./components/chat-history";
+import App from "./components/app";
 import reducer from "./reducers";
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
@@ -22,8 +21,7 @@ const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducer)}>
     <div>
-      <ChatBar />
-      <ChatHistory />
+      <App />
     </div>
   </Provider>,
   document.querySelector(".container")
