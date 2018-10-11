@@ -1,4 +1,4 @@
-import { PUSH_HISTORY, ACTION_SHOUT } from "../actions";
+import { NOTIFY_SHOUTED } from "../actions";
 
 const initialState = {
   chatHistories: []
@@ -6,13 +6,13 @@ const initialState = {
 
 export default function channelReducer(state = initialState, action) {
   switch (action.type) {
-    case ACTION_SHOUT:
-      let Value = {
+    case NOTIFY_SHOUTED:
+      let newState = {
         ...state,
         chatHistories: [...state.chatHistories, action.payload]
       };
-      console.log(Value);
-      return Value;
+      console.log(newState);
+      return newState;
 
     default:
       return state;

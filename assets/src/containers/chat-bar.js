@@ -10,13 +10,11 @@ class ChatBar extends Component {
   handleOnSubmit(event) {
     event.preventDefault();
     console.log(this);
-    console.log(event.target);
     let payload = {
       name: event.target.name.value,
       text: event.target.text.value
     };
     console.log(payload);
-    this.props.channel.push("shout", payload);
     this.props.dispatch(pushHistory(payload));
   }
 
